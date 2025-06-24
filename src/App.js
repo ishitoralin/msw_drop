@@ -1,16 +1,11 @@
-import { useState } from "react"
+import Cards from './feature/Cards'
 
-const Main = () => {
-  const [count, setCount] = useState([1, 2, 3, 4, 5]);
+export default function App() {
   return (
     <>
-      {count.map((item, index) => {
-        return (
-          <div key={index}>row: {item}</div>
-        )
-      })}
+      <div className="App">
+        <Cards></Cards>
+      </div>
     </>
-  )
+  );
 }
-
-export default Main;
