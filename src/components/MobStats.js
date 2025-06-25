@@ -9,8 +9,8 @@ const MobStats = ({ name }) => {
                 <div>等級：{lv}</div>
             </div>
             <div className="mob-card-col-sm-container">
-                <div>HP：{hp}</div>
-                <div>MP：{mp}</div>
+                <div>血量：{hp}</div>
+                <div>魔力：{mp}</div>
             </div>
             <div className="mob-card-col-sm-container">
                 <div>經驗：{exp}</div>

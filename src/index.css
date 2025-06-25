@@ -32,6 +32,11 @@ li {
   transition: 0.1s ease-in-out;
 }
 
+.mob-card-img-container {
+  max-height: 100px;
+  object-fit: fill;
+}
+
 .mob-card:hover {
   border: 1px solid rgb(180, 171, 88);
   transition: 0.1s ease-in-out;
@@ -55,13 +60,20 @@ li {
   justify-content: center;
   align-items: center;
   font-size: 12px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  margin: 3px 0 0 0;
 }
 
 .mob-card-col-sm-container {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
+  font-size: 12px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  margin: 3px 0 0 0;
 }
 
 .mob-card-col-sm-container > div {
@@ -70,4 +82,5 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }

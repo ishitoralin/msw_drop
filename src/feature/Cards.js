@@ -6,7 +6,7 @@ const Cards = () => {
 
   return (
     <>
-      <div className="container text-center">
+      <div className="container-fluid text-center">
         <div className="row g-3">
           {mobsName.map((name, index) => (
             <MobCard key={index} name={name} />
