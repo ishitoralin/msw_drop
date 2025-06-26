@@ -34,7 +34,14 @@ li {
 }
 
 .mob-card-img-container {
-  max-height: 100px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-card-img {
+  max-height: 90px;
   object-fit: fill;
 }
 
@@ -63,7 +70,7 @@ li {
   font-size: 12px;
   border: 1px solid #555;
   border-radius: 3px;
-  margin: 3px 0 0 0;
+  margin-top: 0.5rem;
 }
 
 .mob-card-col-sm-container {
@@ -74,7 +81,7 @@ li {
   font-size: 12px;
   border: 1px solid #555;
   border-radius: 3px;
-  margin: 3px 0 0 0;
+  margin-top: 0.5rem;
 }
 
 .mob-card-col-sm-container > div {
@@ -88,8 +95,8 @@ li {
 
 .drop-category {
   text-align: left;
-  border: 1px solid #555;
-  margin-top: 5px;
+  border: 1px solid #555555;
+  margin-top: 0.5rem;
   border-radius: 3px;
   padding: 0.5rem;
   font-size: 12px;

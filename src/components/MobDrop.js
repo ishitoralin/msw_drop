@@ -1,7 +1,8 @@
 import drops from '../data/drop_data_tmp.json';
-import itemDict from '../init/drop';
+import helper from '../init/helpers';
 
 const MobDrop = ({ name }) => {
+    const itemDict = helper.getItemDict();
     const itemList = drops[name] || [];
     const equipment = [];
     const specialEquipment = []; // arrow, shuriken, bullet
@@ -47,7 +48,7 @@ const MobDrop = ({ name }) => {
                     <div key={title} className='drop-category'>
                         <div className='drop-items'>
                             {items.map((item, index) => (
-                                <div key={index} className='drop-item'>
+                                <div key={`${title}-${index}`} className='drop-item'>
                                     <img
                                         className='drop-item-img'
                                         src={`${process.env.PUBLIC_URL}/images/${encodeURIComponent(item)}.png`}

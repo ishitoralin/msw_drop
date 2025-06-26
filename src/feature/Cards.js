@@ -1,10 +1,9 @@
 import mobs from '../data/mob.json';
 import MobCard from '../components/MobCard';
-import MobDrop from '../components/MobDrop';
 
 const Cards = () => {
   const mobsName = Object.keys(mobs);
-  
+
   const itemDict = {}
 
 

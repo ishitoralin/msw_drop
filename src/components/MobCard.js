@@ -14,9 +14,9 @@ const MobCard = ({ name }) => {
     return (
         <div className="mob-card-container col col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-12">
             <div className='mob-card'>
-                <div>
+                <div className='mob-card-img-container'>
                     <img
-                        className='mob-card-img-container'
+                        className='mob-card-img'
                         src={`${process.env.PUBLIC_URL}/images/${encodeURIComponent(name)}.png`}
                         alt={name}
                         onError={handleError}
