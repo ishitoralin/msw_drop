@@ -17,13 +17,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "sort-mobs": "node src/init/sortMobList.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "sort-mobs": "node src/init/sortMobList.js"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "rules": {
@@ -45,5 +45,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
