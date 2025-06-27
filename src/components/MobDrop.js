@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import drops from '../data/drop_data_tmp.json';
+import alias from '../data/alias.json';
 import helper from '../init/helpers';
 
 const MobDrop = ({ name }) => {
@@ -9,10 +10,11 @@ const MobDrop = ({ name }) => {
 
         const equipment = [];
         const specialEquipment = []; // arrow, shuriken, bullet
-        const scrolls = []; // 
+        const scrolls = []; 
         const consumables = [];
         const materials = [];
 
+        
         for (const item of itemList) {
             const itemCode = itemDict[item];
             if (itemCode >= 1000001 && itemCode <= 1999999) {

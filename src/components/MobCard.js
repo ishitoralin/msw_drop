@@ -11,7 +11,7 @@ const MobCard = ({ name }) => {
                         {name} (BOSS)
                     </span>
                     <span className='boss-card-respawn-time'>
-                        重生：{bossTime[name]}
+                        ⏳{bossTime[name]}
                     </span>
                 </div>
             )

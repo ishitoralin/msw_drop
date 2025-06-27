@@ -25,7 +25,7 @@ li {
 .mob-card-container {
   color: #cccccc;
   border-color: #2a2a2a;
-  width: 250px;
+  width: 300px;
 }
 
 .mob-card {
@@ -88,7 +88,7 @@ li {
 
 .mob-card-col-lg-map {
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   border: 1px solid #555;
   border-radius: 3px;
   padding: 0.5rem 0.5rem;

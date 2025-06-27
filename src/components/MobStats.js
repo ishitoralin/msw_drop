@@ -28,7 +28,7 @@ const MobStats = ({ name }) => {
             <div className="mob-card-col-lg-map">
                 {Object.keys(mapDict).map((item, index) => {
                     return (
-                        <div key={index} style={{ textAlign: 'left', width: '100%' }}>{item}</div>
+                        <div key={index} style={{ textAlign: 'left', width: '100%' }}>🗺️{item}</div>
                     )
                 })}
             </div>
