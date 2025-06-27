@@ -1,9 +1,27 @@
 import MobStats from '../components/MobStats';
 import MobDrop from '../components/MobDrop';
+import bossTime from '../data/boss_time.json';
 
 const MobCard = ({ name }) => {
+    const checkBossName = () => {
+        if (bossTime[name]) {
+            return (
+                <div className='mob-card-name '>
+                    <span>
+                        {name} (BOSS)
+                    </span>
+                    <span className='boss-card-respawn-time'>
+                        重生：{bossTime[name]}
+                    </span>
+                </div>
+            )
+        } else {
+            return (<div className='mob-card-name'>{name}</div>)
+        }
+    }
+
     return (
-        <div className="mob-card-container col col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-12">
+        <div className="mob-card-container text-center">
             <div className='mob-card'>
                 <div className='mob-card-img-container'>
                     <img
@@ -12,7 +30,8 @@ const MobCard = ({ name }) => {
                         alt={name}
                     />
                 </div>
-                <div className='mob-card-name'>{name}</div>
+
+                {checkBossName()}
                 <MobStats name={name} />
                 <MobDrop name={name} />
             </div>

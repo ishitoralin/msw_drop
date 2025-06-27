@@ -1,4 +1,4 @@
-import items from '../data/item.json';
+import items from '../data/item_tmp.json';
 
 class Data {
     constructor() {
