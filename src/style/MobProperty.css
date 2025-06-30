@@ -1,0 +1,57 @@
+.mob-card-col-property-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid #555;
+  border-radius: 3px;
+}
+
+.mob-card-col-property {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  text-align: left;
+  width: 100%;
+  font-size: 12px;
+  padding: 0.2rem;
+  margin-top: 0.3rem;
+}
+
+.mob-property-style {
+  border-radius: 3px;
+  padding: 0.2rem 0.4rem;
+  margin: 0 0.3rem;
+}
+
+.mob-property-style-fire {
+  background-color: rgb(168, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.mob-property-style-ice {
+  background-color: rgb(43, 135, 221);
+  color: rgb(255, 255, 255);
+}
+
+.mob-property-style-poison {
+  background-color: rgb(28, 129, 3);
+  color: rgb(255, 255, 255);
+}
+
+.mob-property-style-holy {
+  background-color: rgb(155, 119, 0);
+  color: rgb(255, 255, 255);
+}
+
+.mob-property-style-lighting {
+  background-color: rgb(117, 5, 209);
+  color: rgb(255, 255, 255);
+}
+
+.mob-property-style-healing {
+  background-color: rgb(110, 31, 100);
+  color: rgb(255, 255, 255);
+}

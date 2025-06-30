@@ -1,0 +1,54 @@
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.mob-card-container {
+  color: #cccccc;
+  border-color: #2a2a2a;
+  width: 300px;
+}
+
+.mob-card {
+  height: 100%;
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  padding: 1rem;
+  border-radius: 5px;
+  transition: 0.1s ease-in-out;
+}
+
+.mob-card-img-container {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-card-img {
+  max-height: 90px;
+  object-fit: fill;
+}
+
+.mob-card:hover {
+  border: 1px solid rgb(180, 171, 88);
+  transition: 0.1s ease-in-out;
+}
+
+.mob-card-name {
+  color: #ffcc00;
+  font-size: 16px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.boss-card-respawn-time {
+  font-size: 14px;
+  color: #1bcab3;
+}

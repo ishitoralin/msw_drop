@@ -1,0 +1,45 @@
+.mob-card-col-lg-map {
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 0.5rem 0.5rem;
+
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mob-card-col-lg-container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  margin-top: 0.5rem;
+}
+
+.mob-card-col-sm-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  border: 1px solid #555;
+  border-radius: 3px;
+  margin-top: 0.5rem;
+}
+
+.mob-card-col-sm-container > div {
+  height: 30px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

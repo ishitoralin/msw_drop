@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import MobStats from '../components/MobStats';
 import MobDrop from '../components/MobDrop';
 import bossTime from '../data/boss_time.json';
+import '../style/MobCard.css'
 
 const MobCard = ({ name }) => {
+
     const checkBossName = () => {
         if (bossTime[name]) {
             return (

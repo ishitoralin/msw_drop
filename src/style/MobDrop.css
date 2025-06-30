@@ -1,0 +1,42 @@
+.drop-category {
+  text-align: left;
+  border: 1px solid #555555;
+  margin-top: 0.5rem;
+  border-radius: 3px;
+  padding: 0.5rem;
+  font-size: 12px;
+}
+
+.drop-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+}
+
+.drop-item-equipments {
+  border: 1px solid #927c22;
+}
+
+.drop-item-consumables {
+  border: 1px solid #1b7a12;
+}
+
+.drop-item-materials {
+  border: 1px solid #2258a8;
+}
+
+.drop-item-scrolls {
+  border: 1px solid #83185f;
+}
+
+.drop-item-img {
+  width: 1rem;
+  object-fit: contain;
+}
+
+.drop-item-name {
+  font-size: 0.85rem;
+  white-space: nowrap;
+  line-height: 1;
+}
