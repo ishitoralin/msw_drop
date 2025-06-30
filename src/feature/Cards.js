@@ -34,7 +34,6 @@ const Cards = () => {
         <MobCard key={index} name={name} />
       ))}
 
-      {/* Scroll 到這邊就載入更多 */}
       <div ref={loaderRef} style={{ height: '1px' }} />
     </div>
   );
