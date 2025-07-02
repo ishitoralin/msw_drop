@@ -1,21 +1,23 @@
 import bossTime from '../data/boss_time.json';
-import '../style/MobCard.css'
+import helper from '../utils/helpers';
+import '../style/MobCard.css';
 
-const MobName = ({ name }) => {
-    if (bossTime[name]) {
-        return (
-            <div className='mob-card-name '>
-                <span>
-                    {name} (BOSS)
-                </span>
+const MobName = ({ name, keywords }) => {
+    const displayName = helper.highlightKeyword(name, keywords);
+
+    return (
+        <div className='mob-card-name'>
+            <span>
+                {displayName}
+                {bossTime[name] && ' (BOSS)'}
+            </span>
+            {bossTime[name] && (
                 <span className='boss-card-respawn-time'>
                     ⏳{bossTime[name]}
                 </span>
-            </div>
-        )
-    } else {
-        return (<div className='mob-card-name'>{name}</div>)
-    }
-}
+            )}
+        </div>
+    );
+};
 
-export default MobName
+export default MobName;

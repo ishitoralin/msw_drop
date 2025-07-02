@@ -58,14 +58,6 @@ class Data {
                 material: []
             };
 
-            categorized.scroll.sort((a, b) => {
-                const getPercent = (str) => {
-                    const match = str.match(/(\d+)%/);
-                    return match ? parseInt(match[1], 10) : 0;
-                };
-                return getPercent(a) - getPercent(b);
-            });
-
             for (const item of items) {
                 const category = this.__categorizeItem(item);
                 if (category && categorized[category]) {
@@ -76,6 +68,15 @@ class Data {
                     });
                 }
             }
+
+            // ✅ 移到資料填入後再排序 scroll
+            categorized.scroll.sort((a, b) => {
+                const getPercent = (str) => {
+                    const match = str.displayName.match(/(\d+)%/);
+                    return match ? parseInt(match[1], 10) : 0;
+                };
+                return getPercent(b) - getPercent(a); // 若你要大到小
+            });
 
             const equipment = [...categorized.equipment, ...categorized.specialEquipment];
             const consumables = [...categorized.consumable, ...categorized.scroll];
@@ -89,8 +90,26 @@ class Data {
         }
     }
 
+    getItemList(name) {
+        return dropData[name]
+    }
+
     getItemDrops(name) {
         return this.itemDrop[name]
+    }
+
+    highlightKeyword(text, keyword) {
+        if (!keyword) return text;
+        const regex = new RegExp(`(${keyword})`, 'gi');
+        const parts = text.split(regex);
+
+        return parts.map((part, index) =>
+            part.toLowerCase() === keyword.toLowerCase() ? (
+                <span key={index} className="highlight">{part}</span>
+            ) : (
+                part
+            )
+        );
     }
 }
 

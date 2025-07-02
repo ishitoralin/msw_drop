@@ -40,3 +40,9 @@
   white-space: nowrap;
   line-height: 1;
 }
+
+.drop-item-name:hover {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
+}

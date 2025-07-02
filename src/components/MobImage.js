@@ -1,4 +1,4 @@
-import '../style/MobCard.css'
+import '../style/MobImage.css'
 
 const MobImage = ({ name }) => {
     return (

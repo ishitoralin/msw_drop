@@ -20,18 +20,6 @@
   transition: 0.1s ease-in-out;
 }
 
-.mob-card-img-container {
-  height: 90px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.mob-card-img {
-  max-height: 90px;
-  object-fit: fill;
-}
-
 .mob-card:hover {
   border: 1px solid rgb(180, 171, 88);
   transition: 0.1s ease-in-out;

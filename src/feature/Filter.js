@@ -1,18 +1,26 @@
-import { useState } from "react"
+import { useState, useEffect } from "react";
 import '../style/Filter.css'
 
-const Filter = () => {
-    const [keyWords, setKeyWords] = useState("")
-    const handleSearch = (e) => {
-        setKeyWords(e.target.value)
-    }
+const Filter = ({ keywords, setKeywords }) => {
+    const [inputValue, setInputValue] = useState(keywords);
+
+    useEffect(() => {
+        const delay = setTimeout(() => {
+            setKeywords(inputValue);
+        }, 300);
+
+        return () => clearTimeout(delay);
+    }, [inputValue, setKeywords]);
 
     return (
         <div className="filter-container">
             <label>搜尋</label>
-            <input onChange={(e) => handleSearch(e)}></input>
+            <input
+                value={inputValue}
+                onChange={(e) => setInputValue(e.target.value)}
+            />
         </div>
-    )
-}
+    );
+};
 
-export default Filter
+export default Filter;

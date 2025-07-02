@@ -1,17 +1,3 @@
-.mob-card-col-lg-map {
-  width: 100%;
-  font-size: 14px;
-  border: 1px solid #555;
-  border-radius: 3px;
-  padding: 0.5rem 0.5rem;
-
-  margin-top: 0.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .mob-card-col-lg-container {
   width: 100%;
   height: 30px;

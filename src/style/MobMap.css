@@ -1,0 +1,30 @@
+.map-container {
+  margin-top: 8px;
+  border: 1px solid #555;
+  font-size: 12px;
+  padding: 0.3rem;
+  border-radius: 3px;
+}
+
+.show-map-button {
+  color: #cccccc;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.show-map-button:hover {
+  color: beige;
+}
+.mob-card-col-lg-map {
+  width: 100%;
+  border-radius: 3px;
+  padding: 0 0.5rem;
+  margin-top: 0.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

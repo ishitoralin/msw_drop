@@ -1,0 +1,11 @@
+.mob-card-img-container {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mob-card-img {
+  max-height: 90px;
+  object-fit: fill;
+}

@@ -1,6 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import mobsName from '../data/validNames.json';
 import mobs from '../data/mob.json';
+import bossTime from '../data/boss_time.json';
+import helper from '../utils/helpers';  // 載入helper
 import MobImage from '../components/MobImage';
 import MobName from '../components/MobName';
 import MobProperty from "../components/MobProperty";
@@ -9,9 +11,24 @@ import MobMap from '../components/MobMap';
 import MobDrop from '../components/MobDrop';
 import '../style/MobCard.css'
 
-const Cards = () => {
+const Cards = ({ keywords }) => {
   const [visibleCount, setVisibleCount] = useState(20);
   const loaderRef = useRef(null);
+
+  const filteredMobs = useMemo(() => {
+    if (!keywords && keywords !== 0) return mobsName;
+    const lower = keywords.toLowerCase();
+
+    return mobsName.filter(name => {
+      const fullName = bossTime[name] ? `${name} (BOSS)` : name;
+      const drops = (helper.getItemList(name) ?? [])
+
+      return (
+        fullName.toLowerCase().includes(lower) ||
+        drops.some(dropName => dropName.toLowerCase().includes(lower))
+      );
+    });
+  }, [keywords]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,16 +54,15 @@ const Cards = () => {
 
   return (
     <div className="cards-container">
-      {/* {mobsName.map((name, index) => ( */}
-      {mobsName.slice(0, visibleCount).map((name, index) => (
+      {filteredMobs.slice(0, visibleCount).map((name, index) => (
         <div key={index} className="mob-card-container text-center">
           <div className='mob-card'>
             <MobImage name={name} />
-            <MobName name={name} />
+            <MobName name={name} keywords={keywords} />
             <MobProperty property={mobs[name][9]} />
             <MobStats name={name} />
-            <MobMap name={name}></MobMap>
-            <MobDrop name={name} />
+            <MobMap name={name} />
+            <MobDrop name={name} keywords={keywords} />
           </div>
         </div>
       ))}

@@ -1,10 +1,8 @@
 import { useMemo } from 'react';
-import drops from '../data/drop_data_tmp.json';
-import alias from '../data/alias.json';
-import helper from '../init/helpers';
+import helper from '../utils/helpers';
 import '../style/MobDrop.css'
 
-const MobDrop = ({ name }) => {
+const MobDrop = ({ name, keywords }) => {
     const categorizedItems = useMemo(() => {
         return helper.getItemDrops(name);
     }, [name]);
@@ -21,7 +19,9 @@ const MobDrop = ({ name }) => {
                                     src={`${process.env.PUBLIC_URL}/images/${encodeURIComponent(item.name)}.png`}
                                     alt={item.displayName}
                                 />
-                                <span className='drop-item-name'>{item.displayName}</span>
+                                <span className='drop-item-name'>
+                                    {helper.highlightKeyword(item.displayName, keywords)}
+                                </span>
                             </div>
                         ))}
                     </div>
