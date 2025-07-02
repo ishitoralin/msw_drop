@@ -1,15 +1,11 @@
 import mobs from '../data/mob.json';
-import map from '../data/map.json';
-import MobProperty from "./MobProperty.js";
 import '../style/MobStats.css'
 
 const MobStats = ({ name }) => {
-    const [lv, hp, mp, exp, eva, pdf, mdf, acc, file, property] = mobs[name];
-    const mapDict = map[name]
+    const [lv, hp, mp, exp, eva, pdf, mdf, acc] = mobs[name];
 
     return (
         <>
-            <MobProperty property={property} />
             <div className="mob-card-col-lg-container">
                 <div>等級：{lv}</div>
             </div>
@@ -28,13 +24,7 @@ const MobStats = ({ name }) => {
             <div className="mob-card-col-lg-container">
                 <div>命中需求：{acc}</div>
             </div>
-            <div className="mob-card-col-lg-map">
-                {Object.keys(mapDict).map((item, index) => {
-                    return (
-                        <div key={index} style={{ textAlign: 'left', width: '100%' }}>🗺️{item}</div>
-                    )
-                })}
-            </div>
+            
         </>
     );
 }
