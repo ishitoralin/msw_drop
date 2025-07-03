@@ -1,16 +1,11 @@
-import { useState } from "react"
-import Filter from './feature/Filter'
-import Cards from './feature/Cards'
+import { BrowserRouter } from 'react-router-dom'
+import AppRoutes from './router/routes'
 
 export default function App() {
-  const [keywords, setKeywords] = useState("")
 
   return (
-    <>
-      <div className="App">
-        <Filter keywords={keywords} setKeywords={setKeywords}></Filter>
-        <Cards keywords={keywords}></Cards>
-      </div>
-    </>
-  );
+    <BrowserRouter basename="/msw_drop">
+        <AppRoutes />
+    </BrowserRouter>
+  )
 }
