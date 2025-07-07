@@ -4,7 +4,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 12px;
   border: 1px solid #555;
   border-radius: 3px;
   margin-top: 0.5rem;
@@ -15,7 +14,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 12px;
   border: 1px solid #555;
   border-radius: 3px;
   margin-top: 0.5rem;
@@ -23,7 +21,6 @@
 
 .mob-card-col-sm-container > div {
   height: 30px;
-  font-size: 12px;
   display: flex;
   justify-content: center;
   align-items: center;

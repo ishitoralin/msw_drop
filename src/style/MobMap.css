@@ -1,7 +1,7 @@
 .map-container {
   margin-top: 8px;
   border: 1px solid #555;
-  font-size: 12px;
+  font-size: 14px;
   padding: 0.3rem;
   border-radius: 3px;
 }
@@ -27,4 +27,14 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.mob-map-item {
+  text-align: left;
+  width: 100%;
+}
+.mob-map-item:hover {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
 }

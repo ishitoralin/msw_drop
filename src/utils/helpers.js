@@ -5,6 +5,7 @@ import dropData from '../data/drop_data_tmp.json'
 
 class Data {
     constructor() {
+        this.itemCodeDict = items
         this.itemDict = {}
         this.itemDrop = {}
         this.itemCategoryMap = {};
@@ -88,6 +89,10 @@ class Data {
                 { title: 'consumables', items: consumables },
             ];
         }
+    }
+
+    getItemDict() {
+        return this.itemDict
     }
 
     getItemList(name) {

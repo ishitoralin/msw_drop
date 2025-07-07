@@ -7,7 +7,7 @@ const MobName = ({ name, keywords }) => {
 
     return (
         <div className='mob-card-name'>
-            <span>
+            <span style={{ fontSize: '16px' }}>
                 {displayName}
                 {bossTime[name] && ' (BOSS)'}
             </span>

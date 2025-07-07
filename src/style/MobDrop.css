@@ -4,7 +4,6 @@
   margin-top: 0.5rem;
   border-radius: 3px;
   padding: 0.5rem;
-  font-size: 12px;
 }
 
 .drop-item {
@@ -36,7 +35,6 @@
 }
 
 .drop-item-name {
-  font-size: 0.85rem;
   white-space: nowrap;
   line-height: 1;
 }
