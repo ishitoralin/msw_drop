@@ -7,7 +7,7 @@ export default function FlowPage() {
     return (
         <>
             <div className="App">
-                <button onClick={() => navigate('/')}>切換回卡片模式</button>
+                <button style={{ minHeight: '50px' }} onClick={() => navigate('/')}>切換回卡片模式</button>
                 <Flow></Flow>
             </div>
         </>
