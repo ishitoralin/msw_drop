@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
+import React from 'react';
 import helper from '../utils/helpers';
 import '../style/MobDrop.css'
 
-const MobDrop = ({ name, keywords }) => {
+const MobDrop = React.memo(({ name, keywords }) => {
     const categorizedItems = useMemo(() => {
         return helper.getItemDrops(name);
     }, [name]);
@@ -23,6 +24,7 @@ const MobDrop = ({ name, keywords }) => {
                                     className='drop-item-img'
                                     src={`${process.env.PUBLIC_URL}/images/${encodeURIComponent(item.name)}.png`}
                                     alt={item.displayName}
+                                    loading="lazy"
                                 />
                                 <span className='drop-item-name' onClick={() => handleSearchItem(item.name)}>
                                     {helper.highlightKeyword(item.displayName, keywords)}
@@ -34,6 +36,6 @@ const MobDrop = ({ name, keywords }) => {
             ))}
         </>
     );
-};
+});
 
 export default MobDrop;
