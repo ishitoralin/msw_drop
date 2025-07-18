@@ -1,0 +1,29 @@
+.page-switcher {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.page-switcher-btn {
+  min-height: 50px;
+  padding: 12px 24px;
+  background-color: var(--color-grey);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: normal;
+  transition: background-color 0.2s ease;
+  outline: none;
+  border: none;
+}
+
+.page-switcher-btn.active {
+  background-color: var(--color-cornflowerblue);
+  color: #fff;
+  font-weight: bold;
+}
+
+.page-switcher-btn:hover:not(.active) {
+  background-color: var(--color-grey-deep);
+}

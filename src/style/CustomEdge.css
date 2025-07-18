@@ -1,0 +1,15 @@
+.edge-label {
+  position: absolute;
+  color: #fff;
+  background-color: transparent;
+  padding: 0.5px 3px;
+  border-radius: 50%;
+  font-size: 12px;
+  pointer-events: all;
+  transition: color 0.2s ease-in-out;
+}
+
+.edge-label:hover {
+  cursor: pointer;
+  color: rgb(107, 162, 243);
+}

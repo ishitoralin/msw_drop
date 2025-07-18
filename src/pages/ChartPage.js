@@ -1,17 +1,17 @@
 import PageSwitcher from '../components/PageSwitcher'
-import Flow from '../feature/Flow'
+import Chart from '../feature/Chart'
 
-const FlowPage = () => {
+const ChartPage = () => {
     return (
         <>
             <div className="PageSwitcher">
                 <PageSwitcher />
             </div>
             <div className="App">
-                <Flow></Flow>
+                <Chart />
             </div>
         </>
     )
 }
 
-export default FlowPage
+export default ChartPage

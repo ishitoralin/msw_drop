@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom'
 import '../style/Filter.css'
 
 const Filter = ({ keywords, setKeywords }) => {
-    const navigate = useNavigate()
     const [inputValue, setInputValue] = useState(keywords);
 
     useEffect(() => {
@@ -16,7 +14,6 @@ const Filter = ({ keywords, setKeywords }) => {
 
     return (
         <div className="filter-container">
-            <button onClick={() => navigate('/flow')}>切換</button>
             <label>搜尋</label>
             <input
                 value={inputValue}

@@ -1,12 +1,16 @@
 import { useState } from 'react'
+import PageSwitcher from '../components/PageSwitcher'
 import Filter from '../feature/Filter'
 import Cards from '../feature/Cards'
 
-export default function CardsPage() {
+const CardsPage = () => {
     const [keywords, setKeywords] = useState("")
 
     return (
         <>
+            <div className="PageSwitcher">
+                <PageSwitcher />
+            </div>
             <div className="App">
                 <Filter keywords={keywords} setKeywords={setKeywords} />
                 <Cards keywords={keywords} />
@@ -14,3 +18,5 @@ export default function CardsPage() {
         </>
     )
 }
+
+export default CardsPage
