@@ -167,123 +167,126 @@ const Chart = () => {
     }
 
     return (
-        <div style={{ width: '100%' }}>
-            {/* 控制面板 */}
-            <div style={{
-                display: 'flex',
-                justifyContent: 'center',
-                gap: window.innerWidth < 768 ? '10px' : '20px',
-                marginBottom: '20px',
-                padding: '10px',
-                // backgroundColor: '#f5f5f5',
-                borderRadius: '8px',
-                flexWrap: window.innerWidth < 768 ? 'wrap' : 'nowrap',
-                alignItems: 'center'
-            }}>
-                <button
-                    onClick={togglePause}
-                    style={{
-                        padding: window.innerWidth < 768 ? '6px 12px' : '8px 16px',
-                        backgroundColor: isPaused ? '#4CAF50' : '#919191',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        transition: 'background-color 0.3s ease',
-                        fontSize: window.innerWidth < 768 ? '12px' : '14px',
-                        ':hover': {
-                            backgroundColor: isPaused ? '#45a049' : '#757575'
-                        }
-                    }}
-                    onMouseEnter={(e) => {
-                        e.target.style.backgroundColor = isPaused ? '#45a049' : '#757575'
-                    }}
-                    onMouseLeave={(e) => {
-                        e.target.style.backgroundColor = isPaused ? '#4CAF50' : '#919191'
-                    }}
-                    onMouseDown={(e) => {
-                        e.target.style.backgroundColor = isPaused ? '#2E7D32' : '#424242'
-                    }}
-                    onMouseUp={(e) => {
-                        e.target.style.backgroundColor = isPaused ? '#45a049' : '#757575'
-                    }}
-                >
-                    {isPaused ? '▶️ 繼續' : '⏸️ 暫停'}
-                </button>
-
-                <button
-                    onClick={resetData}
-                    style={{
-                        padding: window.innerWidth < 768 ? '6px 12px' : '8px 16px',
-                        backgroundColor: '#2196F3',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '4px',
-                        cursor: 'pointer',
-                        transition: 'background-color 0.3s ease',
-                        fontSize: window.innerWidth < 768 ? '12px' : '14px'
-                    }}
-                    onMouseEnter={(e) => {
-                        e.target.style.backgroundColor = '#1976D2'
-                    }}
-                    onMouseLeave={(e) => {
-                        e.target.style.backgroundColor = '#2196F3'
-                    }}
-                    onMouseDown={(e) => {
-                        e.target.style.backgroundColor = '#0D47A1'
-                    }}
-                    onMouseUp={(e) => {
-                        e.target.style.backgroundColor = '#1976D2'
-                    }}
-                >
-                    🔄 重置
-                </button>
-
+        <>
+            <div style={{ width: '100%' }}>
+                {/* 控制面板 */}
                 <div style={{
                     display: 'flex',
-                    alignItems: 'center',
-                    gap: window.innerWidth < 768 ? '5px' : '10px',
-                    fontSize: window.innerWidth < 768 ? '12px' : '14px'
+                    justifyContent: 'center',
+                    gap: window.innerWidth < 768 ? '10px' : '20px',
+                    marginBottom: '20px',
+                    padding: '10px',
+                    // backgroundColor: '#f5f5f5',
+                    borderRadius: '8px',
+                    flexWrap: window.innerWidth < 768 ? 'wrap' : 'nowrap',
+                    alignItems: 'center'
                 }}>
-                    <label>速度:</label>
-                    <select
-                        value={speed}
-                        onChange={(e) => changeSpeed(Number(e.target.value))}
+                    <button
+                        onClick={togglePause}
                         style={{
-                            padding: window.innerWidth < 768 ? '2px 4px' : '4px 8px',
-                            fontSize: window.innerWidth < 768 ? '12px' : '14px'
+                            padding: window.innerWidth < 768 ? '6px 12px' : '8px 16px',
+                            backgroundColor: isPaused ? '#4CAF50' : '#919191',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            transition: 'background-color 0.3s ease',
+                            fontSize: window.innerWidth < 768 ? '12px' : '14px',
+                            ':hover': {
+                                backgroundColor: isPaused ? '#45a049' : '#757575'
+                            }
+                        }}
+                        onMouseEnter={(e) => {
+                            e.target.style.backgroundColor = isPaused ? '#45a049' : '#757575'
+                        }}
+                        onMouseLeave={(e) => {
+                            e.target.style.backgroundColor = isPaused ? '#4CAF50' : '#919191'
+                        }}
+                        onMouseDown={(e) => {
+                            e.target.style.backgroundColor = isPaused ? '#2E7D32' : '#424242'
+                        }}
+                        onMouseUp={(e) => {
+                            e.target.style.backgroundColor = isPaused ? '#45a049' : '#757575'
                         }}
                     >
-                        <option value={50}>很快 (0.05s)</option>
-                        <option value={100}>快 (0.1s)</option>
-                        <option value={500}>中等 (0.5s)</option>
-                        <option value={1000}>慢 (1s)</option>
-                        <option value={2000}>很慢 (2s)</option>
-                    </select>
+                        {isPaused ? '▶️ 繼續' : '⏸️ 暫停'}
+                    </button>
+
+                    <button
+                        onClick={resetData}
+                        style={{
+                            padding: window.innerWidth < 768 ? '6px 12px' : '8px 16px',
+                            backgroundColor: '#2196F3',
+                            color: 'white',
+                            border: 'none',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            transition: 'background-color 0.3s ease',
+                            fontSize: window.innerWidth < 768 ? '12px' : '14px'
+                        }}
+                        onMouseEnter={(e) => {
+                            e.target.style.backgroundColor = '#1976D2'
+                        }}
+                        onMouseLeave={(e) => {
+                            e.target.style.backgroundColor = '#2196F3'
+                        }}
+                        onMouseDown={(e) => {
+                            e.target.style.backgroundColor = '#0D47A1'
+                        }}
+                        onMouseUp={(e) => {
+                            e.target.style.backgroundColor = '#1976D2'
+                        }}
+                    >
+                        🔄 重置
+                    </button>
+
+                    <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: window.innerWidth < 768 ? '5px' : '10px',
+                        fontSize: window.innerWidth < 768 ? '12px' : '14px'
+                    }}>
+                        <label>速度:</label>
+                        <select
+                            value={speed}
+                            onChange={(e) => changeSpeed(Number(e.target.value))}
+                            style={{
+                                padding: window.innerWidth < 768 ? '2px 4px' : '4px 8px',
+                                fontSize: window.innerWidth < 768 ? '12px' : '14px'
+                            }}
+                        >
+                            <option value={50}>很快 (0.05s)</option>
+                            <option value={100}>快 (0.1s)</option>
+                            <option value={500}>中等 (0.5s)</option>
+                            <option value={1000}>慢 (1s)</option>
+                            <option value={2000}>很慢 (2s)</option>
+                        </select>
+                    </div>
+
+                    <div style={{
+                        padding: window.innerWidth < 768 ? '6px 12px' : '8px 16px',
+                        backgroundColor: '#fff',
+                        borderRadius: '4px',
+                        border: '1px solid #ddd',
+                        fontSize: window.innerWidth < 768 ? '12px' : '14px',
+                        textAlign: 'center',
+                        color: 'black'
+                    }}>
+                        📅 {currentDate.toLocaleDateString()} {currentDate.toLocaleTimeString()}
+                    </div>
                 </div>
 
-                <div style={{
-                    padding: window.innerWidth < 768 ? '6px 12px' : '8px 16px',
-                    backgroundColor: '#fff',
-                    borderRadius: '4px',
-                    border: '1px solid #ddd',
-                    fontSize: window.innerWidth < 768 ? '12px' : '14px',
-                    textAlign: 'center',
-                    color: 'black'
-                }}>
-                    📅 {currentDate.toLocaleDateString()} {currentDate.toLocaleTimeString()}
-                </div>
+                {/* 圖表 */}
+                <div
+                    ref={chartRef}
+                    style={{
+                        width: '100%',
+                        height: window.innerWidth < 768 ? '300px' : '400px'
+                    }}
+                />
             </div>
+        </>
 
-            {/* 圖表 */}
-            <div
-                ref={chartRef}
-                style={{
-                    width: '100%',
-                    height: window.innerWidth < 768 ? '300px' : '400px'
-                }}
-            />
-        </div>
     )
 }
 

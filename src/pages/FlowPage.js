@@ -8,7 +8,7 @@ const FlowPage = () => {
                 <PageSwitcher />
             </div>
             <div className="App">
-                <Flow></Flow>
+                <Flow />
             </div>
         </>
     )
